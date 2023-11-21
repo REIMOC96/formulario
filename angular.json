@@ -30,7 +30,18 @@
             "scripts": []
           },
           "configurations": {
-            "production": {
+            "production": {"fileReplacements": [{
+              "replace": "apps/app/src/environments/environments.ts",
+              "with": "apps/app/src/environments(environments.prod.ts"
+            }
+          ],
+          },
+          "development": { ...
+
+          }
+        },
+          "defaultConfiguration": "production"
+      },
               "budgets": [
                 {
                   "type": "initial",
@@ -98,4 +109,7 @@
   "cli": {
     "analytics": "94332531-1c29-45fb-9a2f-c28be6e21dd5"
   }
+  
 }
+
+
